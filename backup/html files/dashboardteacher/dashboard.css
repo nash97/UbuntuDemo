@@ -1,0 +1,524 @@
+@font-face {
+    font-family: 'Humnst777 Lt BT Light';
+    src: URL('./font/tt0855m_.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Humnst777 BlkCn BT Black';
+    src: URL('./font/tt1161m_.ttf') format('truetype');
+  }
+*{
+    font-family: 'Humnst777 Lt BT Light';
+}
+  .setPaperContainer,.schedule{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eceded;
+  }
+  
+  .setpapernav{
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: #8bb8e1;
+    justify-content: space-between ;
+  }
+
+  .setpapernav .logo{
+    width: 20%;
+    background-color: #ffffffb0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .setpapernav .navlinks{
+    width: 15%;
+    /* background-color: #9bdf48; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+
+ .setpapernav .navlinks i{
+ cursor: pointer;
+ }
+ 
+ 
+.contentContainer{
+    display: flex;
+    width: 100%;
+}
+
+
+.setpaperdash{
+    width: 20%;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    min-height: 90vh;
+    background-color: #305f95;
+}
+
+
+
+.paperView , .setPaperContent,.schedule{
+    width: 70%;
+    position:absolute;
+    left: 25%;
+    top: 10%;
+    /* background-color: #f3f3f3c5; */
+}
+.accountform{
+    width: 70%;
+    position:absolute;
+    left: 25%;
+    top: 10%;
+    /* background-color: #f3f3f3c5; */
+}
+.setform,.allform{
+    width: 70%;
+    position:absolute;
+    left: 25%;
+    top: 10%;
+    font-size: 13px;
+    /* background-color: #f3f3f3c5; */
+}
+.scheduleform{
+    width: 70%;
+    /* position:absolute; */
+    display: flex;
+    left: 25%;
+    top: 10%;
+    font-size: 13px;
+    /* background-color: #f3f3f3c5; */
+}
+
+.underhead{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 15%;
+}
+.setform > .underhead{
+    margin-left: 25%;
+}
+.allform > .underhead{
+    margin-left: 25%;
+}
+.dash_links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 6%;
+    cursor: pointer;
+    background-color: #305f95;
+        /* background-color: #0F363F; */
+    justify-content: center;
+}
+
+.dash_links img{
+    height: 30px;
+    margin: 3px 8px;
+    /* margin-right: 30px; */
+    /* background-color: yellow; */
+    /* padding: 10px; */
+}
+
+.dash_links h3{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    margin-top: 10px;
+    color:white;
+    /* background-color: #e3dac9; */
+}
+
+.setPaperContent, .accountform,.schedule, .setform,.allform{
+    padding: 15px;
+}
+
+.setPaperContent .selectExam , .examType, .accountform, .schedule,.setform{
+    display:;
+}
+.schedule{
+    display: flex;
+    flex-direction: row;
+}
+
+ .inputSelection{
+    width: 20%;
+    margin: 5px;
+    /* background-color: aliceblue; */
+}
+
+.inputSelection label,  .inputSelection label {
+font-size: 18px;
+margin: 5px 15px;
+}
+#exam_drop{
+    display: none;
+    flex-direction: column;
+    margin-left: 20px;
+}
+#event_drop{
+    display: none;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.selectDrops{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.drops{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: #004e5d; */
+}
+
+.drop_label{
+    width: 50%;
+    /* background-color: #d3cf9b; */
+    font-size: 20px;
+    margin:15px 10px;
+}
+
+.selections{
+    width: 20%;
+    min-height: 25px;
+    border: none;
+    border-bottom: 1px solid #0F363F;
+}
+
+.selectionsDiff{
+    width: 30%;
+    min-height: 25px;
+
+}
+
+.selections:focus, .selections input:focus{
+    outline: none;
+}
+.logoImgsetPapers{
+    width: 60%;
+    height: 10vh;
+    padding-bottom: 1px;
+    margin: 0 auto;
+    }
+/* dash_drop{
+    display: none;
+    flex-flow: column wrap;
+    width: 50%;
+    margin: 20px;
+} */
+.removeDefaultA, .removeDefaultA:hover, .removeDefaultA:focus, .removeDefaultA:active {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background-color: #eceded;
+}
+.sizebtn{
+    font-size: 17px;
+    width: 100%;
+}
+.accountform{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    color: #305f95;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.allform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    color: #305f95;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.scheduleform{
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: left; */
+    color: #305f95;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: bold;
+}
+.scheduleform > div{
+    align-self: center;
+    background-color: red;
+    
+}
+.setform,.allform{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    color: #305f95;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.inputfields, .inputfields:focus{
+    margin: 5px;
+    border:none;
+}
+input.inputbox:focus{
+    border: none;
+}
+h3#tahead{
+    align-self: flex-start;
+    color: #305f95;
+    font-size:  25px;
+    font-weight: 600;
+}
+ /* .checkbox{
+    display: flex;
+    flex-direction: column
+    align-items: center;
+    max-width: 20%;
+ } */
+
+
+.checks{
+ margin: 10px;
+}
+.labelalign{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: left;
+    width: 500px;
+  
+}
+.inputbox:focus, .inputbox{
+    border: none;
+    outline: none;
+    border-radius: 5%;
+}
+.createbtn{
+    background-color: #8bb8e1;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+    align-self: flex-end;
+    font-weight: bold;
+}
+.schedulebtn{
+    background-color: #8bb8e1;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+    align-self: flex-end;
+    font-weight: bold;
+}
+.btncrt{
+    display: flex;
+    justify-content: flex-end;
+}
+.inputbox{
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+}
+#checkalign{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+#checkalign > span{
+   
+    width: 100%;
+}
+#checkalign > div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#subalign{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+#subalign > span{
+    width: 40%;
+    margin-left: 5px;
+}
+#subalign > div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.aligncheck{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    font-size: 12px;
+}
+
+.aligncheck > div{
+    margin-left: 4px;
+    padding: 3px;
+    min-width: 32%;
+}
+.inputfields{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputfields > div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    font-weight: bold;
+}
+.inputfields > span{
+    width: 50%;
+}
+
+#labelspace{
+    width: 20%;
+    margin-right: 10%;
+}
+#labelspace > label{
+    margin: 0%;
+}
+
+.checkbox#subjects{
+}
+div#subjects.checkbox{
+}
+
+.radioalign{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+}
+.qSelection{
+    width: 12%;
+    margin: 5px;
+    /* background-color: aliceblue; */
+}
+
+.qSelection label,  .qSelection label {
+font-size: 13px;
+margin: 5px 10px;
+}
+.qSelection > input{
+    cursor: pointer;
+}
+.select#selsub{
+    font-weight: 500;
+    font-size: 18px;
+    width: 200px;
+}
+
+
+/* NOT IN USE */
+
+
+
+
+
+/* .dropclass, .dropclass:focus, .dropclass:hover, .dropclass:active{
+    width: 40%;
+    font-size: 12px;
+    background-color: white;
+    color: #305f95;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+} */
+
+
+
+.selection{
+    padding: 0px;
+    margin: 0px;
+}
+.custom-select{
+    margin: 0%; 
+    font-size: 12px;
+    width: 80%;
+    outline: none;
+    border: none;
+}
+.difficulty{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.diffeach{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.diffeach > input{
+}
+.diffeach > label{
+    margin: 0%;
+    width: 40%;
+    margin-right: 0%;
+}
+.inputheight{
+    height: 3vh;
+    font-size: 10px;
+    width: 1%;
+}
+#setpaper.inputfields{
+    margin: 0%;
+    margin-left: 5px;
+}
+.margindiff{
+    margin-top: 15px;
+    left: 3%;
+
+}
+.form-control#diff{
+    max-width: 15%;
+}
+.selected{
+    width: 80%;
+}
+.date_form,.time_form{
+    width: 63%;
+    font-size: 12px;
+}
+.align_datetime{
+    margin-left: 9.2%;
+}
+.questioninput{
+    margin-left: 7%;
+    padding: ;
+}
+#question.inputbox{
+    min-width: 62%;
+}
+.questiontype{
+    padding-bottom: 20px;
+}

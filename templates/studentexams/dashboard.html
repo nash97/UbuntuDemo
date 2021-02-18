@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Record</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+      body{
+        background-color: lightblue;
+      }
+      .header{
+        text-align: right;
+        color: blue;
+        font-size: 20px;
+        padding-right: 40px;
+        padding-top: 2px;
+      }
+      a {
+        color: #414141;
+        text-decoration: none;
+        outline: none;
+        background-color: transparent;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+      }
+      a.ovr-button:hover {
+        background-color: transparent!important;
+      }
+      a.ovr-button {
+        background-color: #06d8a0;
+      }
+      a:hover, a:active {
+        outline: 0;
+      }
+      a, a:visited, a:hover, a:active {
+        text-decoration: none;
+      }
+      h3{
+        text-align: center;
+        padding-bottom: 20px;
+        color: red;
+        font-size: 30px;
+      }
+      .ovr-button {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        padding: 10px 30px;
+        background-color: #06d8a0;
+        border: 1px solid #06d8a0;
+        color: #fff;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -o-border-radius: 30px;
+        border-radius: 30px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      .hello-msg{
+        padding-left: 580px;
+        font-size: 20px;
+        color: #FF69B4;
+        margin-right: 20px;
+        margin: auto;
+      }
+      </style>
+  </head>
+  <body>
+    {% if users %}
+    <h3>User Dashboard</h3>
+    <span style="text-align: center;" class="hello-msg">Hello, {{email}}</span>
+    <div class="header">
+      <a href="/logout" class="ovr-button">Logout</a>
+      <a href="/register" class="ovr-button">Create New User</a>
+      <a href="/" class="ovr-button">Back to Homepage</a>
+    </div><br><hr>
+
+    <table class="table">
+      <thead style="color:red; font-size: 20px;">
+          <th>Id</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Action</th>
+          <th>Action</th>
+      </thead>
+      {% for user in users %}
+
+      <tr style="color:blue; font-size: 18px;">
+          <td>{{user.id}}</td>
+          <td>{{user.firstname}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.mobile}}</td>
+
+          <td>
+            <a href="/delete/{{ user.id }}" onclick="return confirm('Are you sure to Delete the Record')"
+            class="ovr-button" id="confirm-delete" style="border:1px solid lightblue;background-color:red;">Delete</a>
+          </td>
+
+          <td>
+            <a href="/update/{{ user.id }}" class="ovr-button" id="confirm-update"
+            style="border:1px solid lightblue;background-color:orange;">Update</a>
+          </td>
+
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% else %}
+
+      <h3> No Users are there to show</h3>
+
+    {% endif %}
+
+  </body>
+</html>

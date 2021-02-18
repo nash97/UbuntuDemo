@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{%static 'css/createDemoContent.css' %}">
+</head>
+<body>
+    <div class="setPaperContainer" id="uploadpage">
+        <nav class="setpapernav">
+            <div class="logo">
+                <a href="../index.html" class="removeDefaultA" id="pdf"> <img class="logoImgsetPapers" src="{%static 'images/Logo.png' %}" alt="logo"> </a>
+            </div>
+            <div class="navlinks">
+                <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-2x"></i>
+            <a href="../index.html"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        <div class="contentContainer">
+            <aside class="setpaperdash">
+
+                <div class="dash_links">
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                      <i class="fa fa-home fa-sm"></i>
+                      <h3>Dashboard</h3>
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                    <i class="fa fa-users"></i>
+                    <h3>Content Monitor</h3>
+                  <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                </span>
+                  <span class="dashbtn" >
+                    <p style="font-size: 17px;">&#x1F579;</p>
+                    <h3 id="exambtn" >Batch Setup</h3>
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <i class="fa fa-credit-card"></i>
+                    <h3>Exam</h3>
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <i class="fa fa-wrench"></i>
+                    <h3>Course Details</h3>
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                </div>
+
+            </aside>
+
+        </div>
+       <div class="bodymid">
+        <form class="setform" method="POST" action="">
+
+            <!-- <div class="radioalign">
+                <div class="inputSelection"><input type="radio" name="selectmode" id="automatic"><label for="automatic">Automatically</label></div>
+                <div class=" inputSelection"><input type="radio" name="selectmode" id="manual"><label for="manual">Manually</label></div>
+            </div>
+            <div class="radioalign">
+                <div class="qSelection"><span><input type="checkbox" class="qtype" id="mcq" name="mcq" value="mcq"></span><label for="mcq">MCQs</label></div>
+                <div class="qSelection"><input type="checkbox" class="qtype" id="oneinteger" name="oneinteger" value="oneinteger"><label for="oneinteger">One Integer</label></div>
+            </div> -->
+            <div class="underhead">
+                <!-- Each input fields class represents each input element -->
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="seluser" for="selectuser">Select User Type</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <select name="selectclass" class="custom-select mt-2 selected" id="selectuser" onchange="userselect();">
+                                <option value="" disabled selected>Select</option>
+                                <option value="Demo">Demo</option>
+                                <option value="Registered">Registered</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selclass" for="selectclass">Select Class</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <select name="selectclass" class="custom-select mt-2 selected" id="selectclass">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">10th</option>
+                                <option value="2">11th</option>
+                                <option value="3">12th</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selsub" for="subject">Select Subject</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <select name="subject" class="custom-select mt-2 selected" id="subject">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Physics</option>
+                                <option value="2">Maths</option>
+                                <option value="3">Chemistry</option>
+                                <option value="3">All</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selclass" for="topic">Select Topic</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto " >
+                        <div class="form-group selection">
+                            <select name="topic" class="custom-select mt-2 selected" id="topic">
+                                <option value="" disabled selected>Select</option>
+                                <option value="Thermodynamics"> Thermodynamics </option>
+                                <option value="Light"> Light </option>
+                                <option value="Metals"> Metals </option>
+                                <option value="Chemical Formulas"> Chemical Formulas </option>
+                                <option value="Trigonometry"> Trigonometry </option>
+                                <option value="Statistics"> Statistics </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selclass" for="subtopic">Select Sub Topic</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto " >
+                        <div class="form-group selection">
+                            <select name="topic" class="custom-select mt-2 selected" id="subtopic">
+                                <option value="" disabled selected>Select</option>
+                                <option value="Temperature and Heat"> Temperature and Heat</option>
+                                <option value="Thermal Expansion"> Thermal Expansion </option>
+                                <option value="Ideal Gas Law"> Ideal Gas Law </option>
+                                <option value="First Law of Thermodynamics"> First Law of Thermodynamics</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selpdf" for="contenttype">Select Video/PDF</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto " >
+                        <div class="form-group selection">
+                            <select name="topic" class="custom-select mt-2 selected" id="contenttype" onchange="displays();">
+                                <option value="" disabled selected>Select</option>
+                                <option value="PDF">PDF</option>
+                                <option value="VIDEO">VIDEO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="fileshead" id="display1" style="display: none;">
+                    <div class="fileicons">
+                        <div class="uploadfrom">
+                            <label for="file-input">
+                                <img src="library.png" width="50px">
+                            </label>
+                            <input id="file-input" type="file" onchange="filename();" accept="video/*">
+                            <p id="filespace">Choose from File <i class="fa fa-times-circle" style="padding-left: 5px;" onclick="hidecontent();"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selauthor" for="author">Author's Name</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto " >
+                        <div class="form-group selection">
+                            <select name="topic" class="custom-select mt-2 selected" id="author" >
+                                <option value="" disabled selected>Select</option>
+                                <option value="Aamer">Aamer</option>
+                                <option value="Deepshika">Deepshika</option>
+                                <option value="Sanyuktha">Sanyuktha</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="inptitle" for="titlename">Title</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <input type="text" class="selected textfields" id="titlename" placeholder="&nbsp;Add Text...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="inpdescription" for="description">Description</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <textarea rows="4" class="selected textfields" id="description" placeholder="&nbsp;Add Text..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="inputfields" id="payment" style="display: none;">
+                    <div id="labelspace"><Label  class="inputbox" id="inppayment" for="paymentdetails">Payment Details</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <input type="text" class="selected textfields" id="paymentdetails" placeholder="&nbsp;Add Payment Details">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="inputfields" id="button" >
+                    <input class="btn btn-primary btnadjust" type="submit" value="Upload">
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+            </form>
+       </div>
+
+</body>
+<script>
+    function filename(){
+
+        let x = document.getElementById('file-input').value;
+        x = x.replace("C:\\fakepath\\", "")
+        document.getElementById('filespace').innerHTML = x + '<i class="fa fa-times-circle" style="padding-left: 5px;" onclick="hidecontent();"></i>';
+    }
+
+
+    function displays(){
+        let x = document.getElementById('contenttype');
+        let disp =  x.value;
+        let fileinp = document.getElementById('file-input');
+        if(disp!=""){
+            document.getElementById('display1').style.display = "block";
+            if(disp=="PDF"){
+                fileinp.accept = ".pdf";
+            }
+            else{
+                fileinp.accept = "video/*";
+            }
+        }
+    }
+
+    function hidecontent(){
+        document.getElementById('display1').style.display = "none";
+        let x = document.getElementById('contenttype');
+        x.value = "";
+        document.getElementById('file-input').value = null;
+        document.getElementById('filespace').innerHTML = "Choose from File " + '<i class="fa fa-times-circle" style="padding-left: 5px;" onclick="hidecontent();"></i>';
+    }
+
+    function userselect(){
+        let x = document.getElementById('selectuser');
+        let disp =  x.value;
+        if(disp=="Registered"){
+            document.getElementById('payment').style.display = "";
+        }
+        if(disp=="Demo"){
+            document.getElementById('payment').style.display = "none";
+        }
+    }
+
+</script>
+</html>

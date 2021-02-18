@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./cadashboard.css">
+</head>
+<body>
+    <div class="setPaperContainer">
+        <nav class="setpapernav">
+            <div class="logo">
+                <a href="../index.html" class="removeDefaultA"> <img class="logoImgsetPapers" src="../images/Logo.png" alt="logo"> </a>
+            </div>
+            <div class="navlinks">
+                <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+            <a href="../index.html"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        <div class="contentContainer">
+            <aside class="setpaperdash">
+
+                <div class="dash_links"> 
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                      <i class="fa fa-home fa-sm"></i>
+                      <h3>Dashboard</h3>
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                    <i class="fa fa-users"></i>
+                    <h3>Content Monitor</h3>
+                  <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                </span>
+                  <span class="dashbtn" >
+                    <p style="font-size: 17px;">&#x1F579;</p>
+                    <h3 id="exambtn" >Batch Setup</h3> 
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <i class="fa fa-credit-card"></i>
+                    <h3>Exam</h3> 
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <i class="fa fa-wrench"></i>
+                    <h3>Course Details</h3> 
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                </div>
+    
+            </aside>
+        </div>
+      </div>
+        <div class="profilebody">
+          <div class="prof">
+            <div><img src="../images/profpic.png" class="profpic" alt="profilepic"></div>
+        </div> 
+
+        <div class="userdetails">
+          <div class="nameuser">Aamer Faiz</div>
+          <div class="welcome">Welcome to your profile page.</div>
+        </div>
+        <div class="infobtns">
+          <div>
+            <button class="btn btn-primary infobtn">Personal Information</button>
+          </div>
+          <div>
+            <button class="btn btn-primary infobtn">Contact Information</button>
+          </div>
+        </div>
+        </div>
+        <div class="notification">
+            <h5>Notification</h5>
+            <div class="overnotifs">
+              <div class="notifs"><a href="#">Exam Results out</a></div>
+              <div class="notifs"><a href="#">JEE Mains Exam due date out</a></div>
+              <div class="notifs"><a href="#">Live PhysicsClass Streaming</a></div>
+              <div class="notifs"><a href="#">Chemistry Olympiad</a></div>
+              <div class="notifs"><a href="#">New Subscription Offer</a></div>
+              <div class="notifs"><a href="#">Mathematics Olympiad</a></div>
+              <div class="notifs"><a href="#">Mathematics Study Material Uploaded</a></div>
+              <div class="notifs"><a href="#">Physics Model display</a></div>   
+            </div>
+          </div>
+  
+  
+          <div class="pinfo">
+            <h5 >Personal Information</h5>
+            <div class="overnotifs">
+                <div class="notifs"><a href="#">Payment Details</a></div>
+                <div class="notifs"><a href="#">Payment Gateway</a></div>
+                <div class="notifs"><a href="#">Upgrade Payment</a></div>
+                <div class="notifs"><a href="#">Payment Details</a></div>
+                <div class="notifs"><a href="#">Payment Gateway</a></div>
+                <div class="notifs"><a href="#">Upgrade Payment</a></div>
+            </div>
+          </div>
+
+        
+        
+    
+</body>
+<script>
+
+   
+</script>
+</html>

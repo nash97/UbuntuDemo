@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>otp</title>
+  </head>
+  <body>
+    <form class="" action="" method="post">
+      {% csrf_token %}
+      <div class="" style="text-align: center:">
+        Mobile : <input type="text" name="mobile" value=""><br><br>
+        <!-- OTP : <input type="text" name="otp" value=""><br><br> -->
+        <input type="submit" name="submit" value="Generate OTP">
+
+        <div class="message">
+          {% for message in messages %}
+      		  <p id="messages">{{message}}</p>
+      		{% endfor %}
+        </div><br>
+
+      </div>
+    </form>
+  </body>
+</html>

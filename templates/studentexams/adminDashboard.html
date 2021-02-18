@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Presidency - Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    crossorigin="anonymous" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm">
+
+    <style>
+      body{
+        background-color: lightgreen;
+        text-align: center;
+      }
+      h2{
+        font-size: 50px;
+        color: red;
+      }
+      a{
+        font-size: 20px
+      }
+      nav{
+        background-color: orange;
+        padding-top: 200px;
+      }
+      .display-8{
+        font-weight: 200;
+        font-size: 30px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <nav class="one-edge-shadow sticky-top navbar navbar-expand-lg navbar-light">
+
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'images/presidency.png' %}" class="rounded-circle" width="90px" height="70px">
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" style="color:blue;" href="#">Students</a>
+          </li>&emsp;&emsp;
+          <li class="nav-item active">
+            <a class="nav-link" style="color:blue;" href="#">Teachers</a>
+          </li>&emsp;&emsp;
+          <li class="nav-item active">
+            <a class="nav-link" style="color:blue;" href="/register"> Create New Teacher </a>
+          </li>&emsp;&emsp;
+          <li class="nav-item active">
+            <a class="nav-link" href="/login" style="color:blue; font-size:20px;">My Profile</a>
+          </li>&emsp;&emsp;
+          <li class="nav-item active">
+            <a class="nav-link" href="/login" style="color:blue; font-size:20px;">Logout</a>
+          </li>&emsp;&emsp;
+        </ul>
+      </div>
+    </nav>
+
+  </body>
+</html>

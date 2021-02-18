@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./sadashboard.css">
+</head>
+<body>
+    <div class="setPaperContainer" id="uploadpage">
+        <nav class="setpapernav">
+            <div class="logo">
+                <a href="../index.html" class="removeDefaultA" id="pdf"> <img class="logoImgsetPapers" src="../images/Logo.png" alt="logo"> </a>
+            </div>
+            <div class="navlinks">
+                <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-2x"></i>
+            <a href="../index.html"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        <div class="contentContainer">
+            <aside class="setpaperdash">
+
+                <div class="dash_links"> 
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                      <i class="fa fa-home fa-sm"></i>
+                      <h3>Dashboard</h3>
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                    <i class="fa fa-users"></i>
+                    <h3>Create Group Admin</h3>
+                  <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                </span>
+                  <span class="dashbtn" >
+                    <p style="font-size: 17px;">&#x1F579;</p>
+                    <h3 id="exambtn" >Monitor Accounts</h3> 
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <i class="fa fa-credit-card"></i>
+                    <h3>Payment Details</h3> 
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <i class="fa fa-wrench"></i>
+                    <h3>Update Settings</h3> 
+                    <!-- <img src="../images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                </div>
+    
+            </aside>
+            <div class="opbutton">
+                <div class="btnop" id="gnrt1"> Upload PDF</div>
+                <div class="btnop" id="prv1"> Upload Videos</div>
+            </div>
+        </div>
+       <div class="bodymid">
+        <form class="setform" method="POST" action="">
+           
+            <!-- <div class="radioalign">
+                <div class="inputSelection"><input type="radio" name="selectmode" id="automatic"><label for="automatic">Automatically</label></div>
+                <div class=" inputSelection"><input type="radio" name="selectmode" id="manual"><label for="manual">Manually</label></div>
+            </div>
+            <div class="radioalign">
+                <div class="qSelection"><span><input type="checkbox" class="qtype" id="mcq" name="mcq" value="mcq"></span><label for="mcq">MCQs</label></div>
+                <div class="qSelection"><input type="checkbox" class="qtype" id="oneinteger" name="oneinteger" value="oneinteger"><label for="oneinteger">One Integer</label></div>
+            </div> -->
+            <div class="underhead">
+                <h5 id="tahead">Upload Content </h5>
+                <!-- Each input fields class represents each input element -->
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selclass" for="selectclass">Select Class</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <select name="selectclass" class="custom-select mt-2 selected" id="selectclass">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">10th</option>
+                                <option value="2">11th</option>
+                                <option value="3">12th</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selsub" for="subject">Select Subject</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                        <div class="form-group selection">
+                            <select name="subject" class="custom-select mt-2 selected" id="subject">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Physics</option>
+                                <option value="2">Maths</option>
+                                <option value="3">Chemistry</option>
+                                <option value="3">All</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inputfields" id="setpaper">
+                    <div id="labelspace"><Label  class="inputbox" id="selclass" for="topic">Select Topic</Label>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto " >
+                        <div class="form-group selection">
+                            <select name="topic" class="custom-select mt-2 selected" id="topic">
+                                <option value="" disabled selected>Select</option>
+                                <option value="Thermodynamics"> Thermodynamics </option>
+                                <option value="Light"> Light </option>
+                                <option value="Metals"> Metals </option>
+                                <option value="Chemical Formulas"> Chemical Formulas </option>
+                                <option value="Trigonometry"> Trigonometry </option>
+                                <option value="Statistics"> Statistics </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fileshead" >
+                    <p class="filename">File Selected....PDF</p>
+                    <div class="fileicons">
+                        <div class="uploadfrom">
+                            <img src="library.png" width="60px" alt="">
+                            <p id="para">Choose from Library</p>
+                        </div>
+                        <div class="uploadfrom">
+                            <label for="file-input">
+                                <img src="upload.png" width="70px">
+                            </label>
+                            <input id="file-input" type="file">
+                            <p>Choose from Device</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inputfields" id="button" >   
+                    <input class="btn btn-primary btnadjust" type="submit" value="Upload">
+                </div>
+                
+                
+            </div> 
+            
+            
+        </div>
+        
+            </form>         
+       </div>
+    
+</body>
+</html>

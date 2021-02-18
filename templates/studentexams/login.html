@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
+    <link rel="stylesheet" href="{%static 'css/login.css' %}">
+</head>
+<body>
+    <div class="logoposition"><img class="loginlogo" src="{%static 'images/Logo.png' %}"></div>
+    <div class="loginform container">
+
+        <form class="allform" action="" method="post">
+          {% csrf_token %}
+            <h3>Welcome</h3>
+            <div class="logindetails">
+                <div class="inputfields">
+                    <div class="labellogin">
+                        <label for="username">User ID</label>
+                    </div>
+                    <div class="fieldlogin">
+                        <input type="text" class="form-control" name="email" id="username">
+                        <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div class="inputfields">
+                    <div class="labellogin">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="fieldlogin">
+                        <input type="password" class="form-control" name="password" id="username">
+                        <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="loginbtn">
+                <input type="submit"  class="btn btn-primary" value="Login">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

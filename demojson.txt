@@ -1,0 +1,15 @@
+{
+
+	"users":
+		[
+			{
+				"users":  {
+					"name":  "Akhilesh Kumar",
+					"mobile":  9865898754,
+					"email":  "akhilesh@gmail.com",
+					"package":  "IEEE Advanced",
+				}
+			}
+		]
+
+}

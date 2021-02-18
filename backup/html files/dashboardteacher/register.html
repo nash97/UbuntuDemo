@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Student</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+       <!--Home Navbar  -->
+     <div class="container-fluid nav_container_fluid">
+     <div class="nav_container container">
+         <nav class="home_navbar">
+             <div class="logo">
+                 <a href="./index.html" class="removeDefaultA"> <img class="logoImg" src="./images/Logo.png" alt="logo"> </a>
+             </div>
+             <ul class="navlinks">
+                 <div class="vl"></div>
+                 <li class="links"><a href="#about_section" class="removeDefaultA ">About Us</a></li>
+                 <div class="vl"></div>
+                 <li class="links"><a href="#" class="openSignIn1 removeDefaultA "> Demo Class</a></li>
+                 <div class="vl"></div>
+                 <li class="links"><a href="./studyMaterial.html" class=" removeDefaultA ">  Study Material </a></li>
+                 <div class="vl"></div>
+                 <li class="links"><a href="#" class="openSignIn2 removeDefaultA">Demo Exam</a></li>
+                 <div class="vl"></div>
+                 <li class="links"> <a href="./reachUs.html" class="removeDefaultA "> Reach Us </a></li>
+                 <div class="vl"></div>
+             </ul>
+             <div class="navbtns">
+                 <button type="button" class="btn btn-dark login_nav_btn">Login</button>
+             </div>
+         </nav>
+     </div>
+     </div>
+     <!-- courses cards -->
+
+     <div class="container-fluid container_fluid_register">
+      <div class="container register_container">
+
+          <div class="register register1">
+          <div class="registerHead">
+              <h3 class="register_title">Register Now</h3>
+          </div>
+          <div >
+              <form class="registerForm">
+                <div class="inputfields">
+                  <label for="name">Enter Name</label>
+                  <input id="name" class="formInput" type="text" name="name" value="aamer">
+                </div>
+                <div class="inputfields">
+                  <label for="contact">Contact</label>
+                  <input id="contact" class="formInput" type="text" name="contact">
+                </div>
+                <div class="inputfields">
+                  <label for="email">Email Address</label>
+                  <input id="email" class="formInput" type="email" name="email">
+                </div>
+                <div class="inputfields">
+                  <label for="package">Select package</label>
+                  <select id="package" name="package" class="dropinput">
+                    <option disabled selected value></option>
+                    <option value="examcrunch" >Exam Crunch</option>
+                    <option value="asprep">Assessment Prep</option>
+                    <option value="intlearner">Intermediate Learner</option>
+                    <option value="sclab">Scholar Lab</option>
+                    <option value="advlearner">Advanced Learner</option> </select>
+                </div>
+
+              </form>
+              <button  class="btn btn-success register_btn" >Register</button>
+          </div>
+          <div class="registerSubmit">
+          </div>
+      </div>
+      </div>
+  </div>
+
+</body>
+<script src="./register.js"></script>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+</html>

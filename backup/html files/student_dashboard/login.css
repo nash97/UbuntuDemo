@@ -1,0 +1,110 @@
+body{
+    background-image: url(./images/teacherbg.jpg);
+    background-repeat: no-repeat;
+}
+.logoposition{
+    position: relative;
+}
+.loginlogo{
+    width: 10%;
+    height: 10%;
+}
+
+.loginform > form{
+    top: 50vh;
+}
+.logindetails{
+    width: 100%;
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+
+
+.form-control{
+    width: 150px;
+    height: 4vh;
+    background-color: transparent;
+}
+.loginform{
+    display: block;
+}
+
+.allform{
+    width:100%;
+    /* position:absolute; */
+    /* left: 20%; */
+    font-size: 13px;
+    margin-top: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    color: #305f95;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: center;
+}
+.allform > h3{
+}
+
+
+.inputfields{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: left;
+    align-items: center;
+}
+
+.inputfields, .inputfields:focus{
+    margin: 5px;
+    border:none;
+}
+.inputfields > div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* width: 10%; */
+    align-items: center;
+    font-weight: bold;
+}
+
+.labellogin{
+    margin-left: 40%;
+    width: 10%;
+    text-align: left;
+    
+}
+.fieldlogin{
+    min-width: 170px;
+    display: flex;
+
+    background-color: #dff9fd;
+    outline: none;
+    border: none;
+    border-radius: 4%; 
+
+}
+.fieldlogin > input, .fieldlogin > input:focus{
+    outline: none;
+    border: none;
+    border-radius: 4%;
+    
+}
+
+.loginbtn{
+    margin:30px;
+    /* margin-left: 30%; */
+
+}
+.loginbtn > input{
+    /* width: 25%; */
+    background-color: #305f95;
+}

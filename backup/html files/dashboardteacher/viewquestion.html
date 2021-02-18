@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="setPaperContainer">
+        <nav class="setpapernav">
+            <div class="logo">
+                <a href="./index.html" class="removeDefaultA"> <img class="logoImgsetPapers" src="./images/Logo.png" alt="logo"> </a>
+            </div>
+            <div class="navlinks">
+                <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+            <a href="./index.html"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        <div class="contentContainer">
+            <aside class="setpaperdash">
+                <div class="dash_links"> 
+                  <span class="dashbtn" id="dashboard" onclick="clicked(this.id)">
+                    <h3>Dashboard</h3>
+                    <!-- <img src="./images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn evdrop"  >
+                    <h3 id="eventsbtn">Events</h3> 
+                    <div id="event_drop" >
+                      <p class="sizebtn">Calendar</p>
+                      <p class="sizebtn" id="schedulebtn">Schedule Paper</p>
+                     </div>
+                    <!-- <img src="./images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn exdrop" >
+                    <h3 id="exambtn" >Exam</h3> 
+                    <div id="exam_drop" >
+                      <p class="sizebtn">Schedule Paper</p>
+                      <p class="sizebtn">Schedule Paper</p>
+                     </div>
+                    <!-- <img src="./images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                  <span class="dashbtn" id="contentbtn" onclick="clicked(this.id)">
+                    <h3>Content</h3> 
+                    <!-- <img src="./images/setpaper.png" alt="setpaper"> <h3>Set Paper</h3>  -->
+                  </span>
+                </div>
+    
+            </aside>
+ <!-- div for teachers dashboard starts here (Teacher's Account) -->
+           
+<!-- div for teachers dashboard home end here -->
+            <!-- below not functioning!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+            <div class="scheduleform" style="" >
+               
+                
+                 <form class="allform" method="POST" action="">
+                  <H3 id="tahead">View Question Bank</H3>
+                  <div class="underhead">
+
+                    <div class="inputfields">
+                            <div id="labelspace"><Label  class="inputbox" id="selclass" for="selclass">Select Class</Label>
+                            </div>
+                            <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                                <div class="form-group selection">
+                                    <select class="custom-select mt-2 selected" name="selectclass">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="1">10th</option>
+                                        <option value="2">11th</option>
+                                        <option value="3">12th</option>
+                                    </select>
+                                </div>
+                            </div>
+                      </div>
+
+
+                    <div class="inputfields">
+                          <div id="labelspace"><Label  class="inputbox" id="selsub" for="selSub">Select Subject</Label>
+                          </div>
+                          <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                              <div class="form-group selection">
+                                  <select class="custom-select mt-2 selected" name="subject">
+                                      <option value="" disabled selected>Select</option>
+                                      <option value="1">Physics</option>
+                                      <option value="2">Maths</option>
+                                      <option value="3">Chemistry</option>
+                                      <option value="3">All</option>
+                                  </select>
+                              </div>
+                          </div>
+                    </div>
+                      
+                    
+
+                    <div class="inputfields">
+                      <div id="labelspace"><Label  class="inputbox" id="selsub" for="selSub">Select Topic</Label>
+                      </div>
+                      <div class="sidebar col-sm-4 col-md-7 d-inline align-self-auto" >
+                          <div class="form-group selection">
+                            <select class="custom-select mt-2 selected" id="selSub" name="topic">
+                              <option value="" disabled selected>Select</option>
+                              <option value="Thermodynamics"> Thermodynamics </option>
+                              <option value="Light"> Light </option>
+                              <option value="Metals"> Metals </option>
+                              <option value="Chemical Formulas"> Chemical Formulas </option>
+                              <option value="Trigonometry"> Trigonometry </option>
+                              <option value="Statistics"> Statistics </option>
+                            </select>
+                          </div>
+                      </div>
+                    </div>   
+                    
+                    
+                    
+                  
+                        
+                    
+                   
+              
+                  </div>
+                  <div class="btncrt">
+                    <input type="submit" value="Retrieve Paper" class="createbtn">
+                  </div>
+                </form>
+              </div>
+               <!-- <div class="selectExam">
+                   <div class="inputSelection"><input type="radio" name="selectExam" id="jeeMainSelect"><label for="jeeMainSelect">JEE Main</label></div>
+                   <div class=" inputSelection"><input type="radio" name="selectExam" id="jeeAdvSelect"><label for="jeeAdvSelect">JEE Advance</label></div>
+               </div>
+               <div class="examType">
+                   <div class="inputSelection"> <input type="checkbox" name="examType" id="mcqSelect"> <label for="mcqSelect">MCQ</label> </div>
+                   <div class="inputSelection"> <input type="checkbox" name="examType" id="subjectiveSelect"> <label for="subjectiveSelect">SUBJECTIVE</label> </div>
+               </div>
+
+               <div class="selectDrops">
+                   <div class="drops">
+                       <Label  class="drop_label" for="selSub">Select Subject</Label>
+                   <select class="selections" id="selSub">
+                    <option value="" disabled selected>Select</option>
+                       <option value="">Physics</option>
+                       <option value="">Maths</option>
+                       <option value="">Chemistry</option>
+                       <option value="">All</option>
+                   </select>
+                </div>
+                <div class="drops">
+                    <Label class="drop_label" for="selTop">Select Topic</Label>
+                    <select class="selections" id="selTop">
+                    <option value="" disabled selected>Select</option>
+                    <option value="">Topic 1</option>
+                    <option value="">Topic 2</option>
+                    <option value="">Topic 3</option>
+                    <option value="">Topic 4</option>
+                </select>
+            </div>
+            <div class="drops">
+                <Label class="drop_label" for="selRat">Select Difficulty</Label>
+                <div class="selectionsDiff">
+                 <label  class="number_label"  for="easy">Easy : </label>   <input type="number" placeholder="" min="0" max = "100" class="diffPer" name="" id="easy"> %
+                 <label  class="number_label"  for="avg">Average :</label>  <input type="number" placeholder="" min="0" max = "100"  class="diffPer" name="" id="avg"> %
+                 <label  class="number_label"  for="tough">Tough :</label>  <input type="number" placeholder="" min="0" max = "100"  class="diffPer" name="" id="tough"> %
+                 <label  class="number_label"  for="vtough">Very Tough :</label>  <input type="number" placeholder="" min="0" max = "100"  class="diffPer" name="" id="vtough"> %    
+                </div>
+                   
+            </div>
+
+
+               <div class="drops">
+                <Label class="drop_label" for="selQ">No. of Questions</Label>
+                <select class="selections"  id="selQ"> -->
+                <!-- <option value="" disabled selected>Select</option> -->
+                <!-- <option value="" selected>set of 25</option>
+                <option value="" disabled >set of 30</option>
+                <option value="" disabled >set of 40</option>
+            </select>
+        </div>
+
+        <div class="drops">
+            <Label class="drop_label" for="selmark">Total Marks</Label>
+            <input class="selections" id="selmark" type="text" value="100" readonly>
+    </div> -->
+
+             
+            <!-- <button class="btn btn-primary btn-setPaper" data-toggle="modal" data-target="#setpapermodal">Set Paper</button> -->
+
+<!-- Once button is clicked this is shown  -->
+            <div class="modal fade" id="setpapermodal" tabindex="-1" role="dialog" aria-labelledby="setpapermodalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="setpapermodalLabel">Are you sure you want to Schedule?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      No changes are possible once you click Schedule Paper. 
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#" type="button" class="btn btn-secondary" onclick="schedule()">Schedule</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+       
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="dashboard.js"></script>
+</html>

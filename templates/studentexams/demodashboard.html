@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DJAGNO REST APIS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body{
+        background-color: lightgreen;
+      }
+      h2, h3{
+        color: blue;
+      }
+      tr{
+        font-size: 25px;
+      }
+      th{
+        color: red;
+      }
+      td{
+        font-size: 20px;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("td").each(function(){
+          if(this.innerText==="")
+          {
+            this.closest("tr").remove()
+          }
+        });
+      });
+    </script>
+  </head>
+  <body align="center">
+
+    <h2>This is the Dashboard for REST APIs</h2>
+    <hr>
+
+    {% csrf_token %}
+    <table border="1" align="center">
+      <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Package</th>
+      </tr>
+      {% for user in usermodel %}
+      <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.package}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </body>
+</html>
